@@ -1,0 +1,17 @@
+@import "../../../assets/theme/_var.scss";
+
+.video_layout {
+    video {
+        margin-bottom: -1rem;
+        width: 100vw;
+        height: 100vh;
+        object-fit: fill;
+        background-color: $black18;
+    }
+
+    .back_btn {
+        position: fixed;
+        bottom: 4rem;
+        right: 4rem;
+    }
+}

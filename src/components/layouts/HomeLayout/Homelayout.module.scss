@@ -1,0 +1,72 @@
+@import "../../../assets/theme/_var.scss";
+
+.home_layout {
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url($s3bucket + "/login-bg.webp");
+    // background-position: top bottom;
+    // background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url($s3bucket + "/login-bg-overlay.webp");
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+
+    &.video_bg {
+        &::after {
+            background: linear-gradient(180deg, rgba($black, 0.7), rgba($black, 0.7));
+        }
+    }
+
+    :global {
+        @keyframes myfirst {
+            0% {
+                background-position: 0 0, 100% 100%, 100% 0, 0 100%;
+            }
+
+            100% {
+                background-position: 0 100%, 100% 0%, 0 0, 100% 100%;
+            }
+        }
+    }
+
+    .bordered_bg {
+        width: calc(100% - 2.5rem);
+        height: calc(100% - 2.5rem);
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        background-color: transparent;
+        background-image: linear-gradient(0deg, transparent, transparent 50%, $baseclr 50%, $baseclr 100%), linear-gradient(0deg, transparent, transparent, transparent 50%, $baseclr 50%, $baseclr 100%), linear-gradient(90deg, transparent, transparent 50%, $baseclr 50%, $baseclr 100%), linear-gradient(90deg, transparent, transparent 50%, $baseclr 50%, $baseclr 100%);
+        background-repeat: repeat-y, repeat-y, repeat-x, repeat-x;
+        background-size: 2px 2rem, 2px 2rem, 2rem 2px, 2rem 2px;
+        opacity: 0.4;
+        animation: myfirst 60s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    &.ques_bg {
+        background-image: url($s3bucket + "/question_page.jpg");
+
+        &::after {
+            background-image: url($s3bucket + "/question-page-overlay.webp");
+        }
+    }
+}

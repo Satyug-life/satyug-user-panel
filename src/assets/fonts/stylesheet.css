@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Scriptina';
+    src: url('Scriptina.woff2') format('woff2'),
+        url('Scriptina.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

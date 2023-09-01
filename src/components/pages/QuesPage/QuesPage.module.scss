@@ -1,0 +1,352 @@
+@import "../../../assets/theme/_var.scss";
+
+.mainImg {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    object-fit: cover;
+    transition: 200ms ease-in-out;
+    z-index: 1060;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.ques_page {
+    // padding: 15.5rem 0 37.6rem;
+    min-height: 100vh;
+    // min-height: calc(100vh - 10.1rem);
+    padding: 8.5rem 0;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    display: flex;
+    align-items: center;
+
+    &.show {
+        opacity: 1;
+    }
+
+    @media (max-height: 799px) and (max-width: 1439px) {
+        padding: 4rem 0;
+
+        .archery_icon {
+            max-width: 6rem;
+        }
+    }
+
+    @media (max-height: 479px) and (max-width: 1199px) {
+        padding: 2rem 0;
+
+        .archery_icon {
+            max-width: 4rem;
+        }
+    }
+
+    :global(.container) {
+        max-width: 141rem;
+        padding-inline: 1.5rem;
+    }
+
+    .back_btn {
+        @media (max-height: 619px) {
+            position: absolute;
+        }
+    }
+
+    &_inner {
+        text-align: center;
+
+        h1 {
+            margin-top: 3.8rem;
+            font-size: 3.4rem;
+            font-weight: 400;
+            line-height: 3.9rem;
+            letter-spacing: 0.14px;
+            color: $baseclr;
+
+            @media (max-width: 1439px) {
+                font-size: 3rem;
+            }
+
+            @media (max-width: 1199px) {
+                font-size: 2.6rem;
+            }
+
+            @media (max-width: 991px) {
+                font-size: 2.4rem;
+            }
+
+            @media (max-height: 619px) and (max-width: 1439px) {
+                font-size: 2rem;
+                margin-top: 2rem;
+            }
+
+            @media (max-height: 479px) and (max-width: 1199px) {
+                font-size: 1.4rem;
+                margin-top: 1rem;
+            }
+
+            @media (max-height: 419px) and (max-width: 1199px) {
+                font-size: 1.2rem;
+                margin-top: 0.8rem;
+            }
+        }
+
+        .correct_answer {
+            color: green;
+            font-size: 2.4rem;
+        }
+
+        .wrong_answer {
+            color: red;
+            font-size: 2.4rem;
+        }
+
+        h2 {
+            margin: 2.4rem auto 3.6rem;
+            color: $textclr ;
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            text-shadow: 0px 3.036646604537964px 3.036646604537964px 0px rgba(0, 0, 0, 0.25);
+            font-size: 3rem;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            max-width: 81rem;
+
+
+            @media (max-width: 1439px) {
+                font-size: 2.6rem;
+            }
+
+            @media (max-width: 1199px) {
+                font-size: 2.4rem;
+            }
+
+            @media (max-width: 991px) {
+                font-size: 2.2rem;
+            }
+
+            @media (max-height: 619px) and (max-width: 1439px) {
+                margin: 1.4rem auto 2.6rem;
+                font-size: 2.4rem;
+            }
+
+            @media (max-height: 479px) and (max-width: 1199px) {
+                margin: 0.8rem auto 1.6rem;
+                font-size: 2rem;
+            }
+
+            @media (max-height: 419px) and (max-width: 1199px) {
+                margin: 0.4rem auto 1rem;
+                font-size: 1.6rem;
+            }
+        }
+
+        form {
+            overflow: hidden;
+
+            ul {
+                // @media (max-width: 1439px) and (max-height: 799px) {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-inline: auto;
+                max-width: 90rem;
+                transform: translateX(10rem);
+                margin-bottom: -1rem;
+
+                // }
+                @media (max-width: 991px) {
+                    max-width: 50rem;
+                    transform: translateX(5rem);
+                }
+
+                @media (max-width: 575px) {
+                    max-width: 40rem;
+                }
+
+                li {
+                    margin-bottom: 3.5rem;
+                    padding-inline: 1rem;
+
+                    @media (max-width: 1199px) {
+                        margin-bottom: 3rem;
+                    }
+
+                    @media (max-width: 991px) {
+                        margin-bottom: 2rem;
+                    }
+
+                    // @media (max-width: 1439px) and (max-height: 799px) {
+                    flex: 0 0 50%;
+                    text-align: left;
+                    margin-bottom: 1rem;
+                    // }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    label {
+                        font-size: 2.8rem;
+                        font-weight: 400;
+                        line-height: 3.2rem;
+                        letter-spacing: 0.01em;
+                        text-align: center;
+                        cursor: pointer;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        @media (max-width: 1439px) {
+                            font-size: 2.4rem;
+                        }
+
+                        @media (max-width: 1199px) {
+                            font-size: 2.2rem;
+                            line-height: 3rem;
+                        }
+
+                        @media (max-width: 991px) {
+                            font-size: 1.8rem;
+                            line-height: 2.4rem;
+                        }
+
+                        // @media (max-width: 1439px) and (max-height: 799px) {
+                        justify-content: flex-start;
+                        // }
+
+                        @media (max-height: 619px) and (max-width: 1439px) {
+                            font-size: 1.6rem;
+                        }
+
+                        @media (max-height: 479px) and (max-width: 1439px) {
+                            font-size: 1.4rem;
+                        }
+
+                        input {
+                            margin-right: 1.7rem;
+                            flex-shrink: 0;
+                            background-color: $radioBg;
+                            width: 1.8rem;
+                            cursor: pointer;
+                            outline: none;
+                            border: none;
+                            height: 1.8rem;
+                            accent-color: $radioBg;
+                            position: relative;
+
+                            &::after {
+                                border-radius: 50%;
+                                background-color: $radioBg;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                content: "";
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            +.radio_btn {
+                                position: absolute;
+                                width: 1.8rem;
+                                height: 1.8rem;
+                                border-radius: 50%;
+                                background-color: $radioBg;
+                            }
+
+                            &:checked {
+                                &::after {
+                                    background-color: $baseclr;
+                                }
+
+                                +.radio_btn {
+                                    background: $baseclr !important;
+                                }
+
+                                ~span {
+                                    background-image: url($s3bucket + "/secondary-btn.png");
+                                    color: $baseclr;
+
+                                    &::after,
+                                    &::before {
+                                        background-image: $gradient2;
+                                    }
+                                }
+                            }
+                        }
+
+                        span {
+                            height: 5rem;
+                            color: rgba($textclr, 0.4);
+                            background-size: cover;
+                            background-position: center;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: left;
+                            background-repeat: no-repeat;
+                            position: relative;
+
+                            @media (max-height: 619px) and (max-width: 1439px) {
+                                height: 4rem;
+                            }
+
+                            @media (max-height: 479px) and (max-width: 1439px) {
+                                height: 3.4rem;
+                            }
+
+                            &::after,
+                            &::before {
+                                content: "";
+                                width: 100%;
+                                max-width: 24rem;
+                                height: 1px;
+                                position: absolute;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+
+                            &::after {
+                                top: 0;
+                            }
+
+                            &::before {
+                                bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .submit_action {
+                margin-top: 7rem;
+
+                @media (max-width: 1439px) {
+                    margin-top: 5rem;
+                }
+
+                @media (max-width: 1199px) {
+                    margin-top: 3rem;
+                }
+
+                @media (max-width: 991px) {
+                    margin-top: 2rem;
+                }
+
+                @media (max-height: 619px) and (max-width: 1439px) {
+                    height: 4rem;
+                    max-width: 16rem;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}

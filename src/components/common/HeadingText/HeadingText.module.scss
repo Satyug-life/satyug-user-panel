@@ -1,0 +1,65 @@
+@import "../../../assets/theme/_var.scss";
+
+.heading_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        font-size: 3.4rem;
+        font-weight: 400;
+        line-height: 3.9rem;
+        letter-spacing: 0.01em;
+        text-align: center;
+        color: $baseclr;
+
+        @media (max-width: 1679px) {
+            font-size: 3rem;
+        }
+
+        @media (max-width: 1439px) {
+            font-size: 2.4rem;
+            line-height: 3rem;
+        }
+
+        @media (max-width: 1199px) {
+            font-size: 2.2rem;
+            margin-inline: 1rem;
+            line-height: 2.8rem;
+        }
+
+        @media (max-width: 991px) {
+            font-size: 2rem;
+            line-height: 2.6rem;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+        }
+
+        @media (max-height: 619px) {
+            font-size: 2rem;
+        }
+
+        @media (max-height: 479px) {
+            font-size: 1.8rem;
+        }
+
+        @media (max-height : 419px) {
+            font-size: 1.6rem;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        span {
+            max-width: 6rem;
+        }
+    }
+
+    @media (max-height: 419px) {
+        span {
+            max-width: 4rem;
+        }
+    }
+}

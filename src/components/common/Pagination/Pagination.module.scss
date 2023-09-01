@@ -1,0 +1,59 @@
+@import "../../../assets/theme/_var.scss";
+
+.pagination {
+    :global {
+        .page-item {
+            margin-right: 1.6rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:first-child,
+            &:last-child {
+                .page-link {
+                    background-color: rgba($white, 0.3);
+                    border-color: rgba($textclr2, 0.3);
+
+                    &:hover {
+                        background-color: $white;
+                        border-color: $textclr2;
+                    }
+                }
+            }
+        }
+
+        .page-link {
+            width: 4rem;
+            height: 4rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: $black;
+            box-shadow: none;
+            border: 1px solid rgba($baseclr, 0.3);
+            color: rgba($white, 0.6);
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.2rem;
+            border-radius: 0.4rem;
+
+            @media (max-width: 1199px) and (max-height: 619px) {
+                height: 3.4rem;
+                width: 3.4rem;
+                font-size: 1.2rem;
+            }
+
+            &:hover {
+                color: rgba($baseclr, 0.6);
+                border-color: rgba($baseclr, 0.6);
+            }
+        }
+
+        span.page-link {
+            color: rgba($baseclr, 0.6);
+            border-color: rgba($baseclr, 0.6);
+        }
+    }
+}

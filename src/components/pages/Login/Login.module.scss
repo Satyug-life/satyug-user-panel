@@ -1,0 +1,199 @@
+@import "../../../assets/theme/_var.scss";
+
+.login_page {
+
+    .archery_icon {
+        max-width: fit-content;
+        margin-inline: auto;
+        display: block;
+        margin-bottom: 1.7rem;
+
+        @media (max-height: 479px) {
+            max-width: 4rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .logo {
+        z-index: 1;
+        position: relative;
+    }
+
+    .animation {
+        margin-top: -1rem;
+        z-index: 0;
+        margin-inline: auto;
+        max-width: 26.4rem;
+    }
+
+    @media (max-width: 1439px) {
+        .animation {
+            max-width: 25rem;
+        }
+    }
+
+    @media (max-width:1199px) {
+        .animation {
+            max-width: 20rem;
+        }
+    }
+
+    @media (max-height: 479px) and (max-width: 1439px) {
+        .animation {
+            max-width: 15rem;
+        }
+    }
+
+    @media (max-height: 419px) and (max-width: 1439px) {
+        .animation {
+            max-width: 12rem;
+        }
+    }
+
+    form {
+
+        .input {
+            // justify-content: flex-end;
+            margin-bottom: 1.2rem;
+
+            @media (max-width: 991px) {
+                justify-content: center;
+            }
+
+            @media (min-width: 576px) {
+                label {
+                    text-align: right;
+                    width: 10rem;
+                }
+            }
+
+            &:last-of-type {
+                margin-bottom: 6.2rem;
+
+                @media (max-height: 619px) and (max-width: 1439px) {
+                    margin-bottom: 4rem;
+                }
+
+                @media (max-height: 479px) and (max-width: 1199px) {
+                    margin-bottom: 2rem;
+                }
+
+                @media (max-height: 419px) and (max-width: 1199px) {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            >div {
+                input {
+                    @media (min-width: 576px) {
+                        width: 20.5rem !important;
+                    }
+
+                    @media (min-width: 992px) {
+                        width: 31.5rem !important;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+body {
+
+    :global {
+
+        .thanks_backdrop {
+            &.show {
+                opacity: 1;
+                background-color: rgba($black, 0.0);
+                backdrop-filter: blur(1rem);
+            }
+        }
+    }
+}
+
+.thanks_modal {
+    :global {
+        .modal-dialog {
+            padding: 1.4rem;
+            max-width: 65rem;
+
+            @media (max-width: 1439px) {
+                max-width: 50rem;
+            }
+
+            .modal-content {
+                border: 2px solid $baseclr2;
+                // background-color: $black23;
+                border-radius: 1rem;
+                background-image: url($s3bucket + "/login-bg.webp");
+                box-shadow: 0px 0px 40px 0px rgba($baseclr2, 0.302);
+                background-size: cover;
+                background-position: center;
+                z-index: 0;
+
+                &::after {
+                    content: "";
+                    z-index: -1;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    border-radius: inherit;
+                    top: 0;
+                    left: 0;
+                    background-image: url($s3bucket + "/login-bg-overlay.webp");
+                    background-size: cover;
+                    background-position: top;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .modal-body {
+                text-align: center;
+                padding: 6rem 2rem;
+
+                @media (max-width: 1439px) {
+                    padding: 4rem 2rem;
+                }
+
+                @media (max-width: 1199px) {
+                    padding: 3rem 2rem;
+                }
+
+                p {
+                    color: $baseclr2;
+                    font-size: 3.2rem;
+
+                    @media (max-width: 1679px) {
+                        font-size: 2.8rem;
+                    }
+
+                    @media (max-width: 1439px) {
+                        font-size: 2.4rem;
+                    }
+
+                    @media (max-width: 1199px) {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .archery_icon {
+        margin-bottom: 3rem;
+
+        @media (max-width: 1199px) {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    .continue_btn {
+        margin: 3rem 0 0;
+
+        @media (max-width: 1199px) {
+            margin: 1.6rem 0 0;
+        }
+    }
+}

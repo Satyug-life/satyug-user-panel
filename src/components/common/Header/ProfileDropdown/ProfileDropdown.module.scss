@@ -1,0 +1,82 @@
+@import "../../../../assets/theme/_var.scss";
+
+.profile {
+
+    .profile_box {
+        display: flex;
+        padding: 0;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+
+        &:hover,
+        &:active {
+            background-color: transparent !important;
+        }
+
+        // &::after {
+        //     content: unset;
+        // }
+
+        img {
+            width: 4rem;
+            margin-right: 0.6rem;
+            height: 4rem;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            border: 1px solid $white;
+
+            @media (max-height: 479px) and (max-width: 1439px) {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.8rem;
+            letter-spacing: 0.01em;
+            color: $white;
+
+            @media (max-height: 479px) and (max-width: 1439px) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .profile_dropdown {
+        background-color: rgba($black23, 1);
+        padding: 0;
+        border: 1px solid rgba($white, 0.2);
+        left: unset !important;
+        right: 0 !important;
+        margin-top: 1rem;
+
+        a {
+            width: 20rem;
+            color: $white;
+            padding: 0.8rem 2rem;
+            background-color: transparent;
+            display: block;
+            font-size: 1.6rem;
+
+            @media (max-width: 1439px) and (max-height: 767px) {
+                font-size: 1.4rem;
+            }
+
+            @media (max-width: 1439px) and (max-height: 619px) {
+                font-size: 1.2rem;
+            }
+
+            @media (max-width: 1439px) and (max-height: 621px) {
+                font-size: 1.2rem;
+            }
+
+            &:hover {
+                background-color: rgba($white, 0.08);
+            }
+        }
+    }
+}

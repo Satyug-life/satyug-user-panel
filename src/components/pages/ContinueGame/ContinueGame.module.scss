@@ -1,0 +1,88 @@
+@import "../../../assets/theme/_var.scss";
+
+
+.continue_game {
+
+    .archery_icon {
+        max-width: fit-content;
+        margin-inline: auto;
+        display: block;
+        margin-bottom: 1.7rem;
+
+        @media (max-height: 479px) {
+            max-width: 4rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .heading {
+        z-index: 1;
+        position: relative;
+
+        h2 {
+            @media (min-width: 1440px) {
+                font-size: 6.2rem;
+                line-height: 7rem;
+            }
+        }
+    }
+
+    .animation {
+        margin-top: -1rem;
+        z-index: 0;
+        max-width: 26.4rem;
+        margin-inline: auto;
+    }
+
+    @media (max-width: 1439px) {
+        .animation {
+            margin-top: -1rem;
+            max-width: 25rem;
+            margin-inline: auto;
+        }
+    }
+
+    @media (max-width:1199px) {
+        .animation {
+            max-width: 20rem;
+        }
+    }
+
+    @media (max-height: 479px) {
+        .animation {
+            max-width: 15rem;
+        }
+    }
+
+    @media (max-height: 419px) {
+        .animation {
+            max-width: 12rem;
+        }
+    }
+
+    p {
+        font-size: 1.6rem;
+        font-weight: 400;
+        z-index: 1;
+        position: relative;
+        line-height: 1.8rem;
+        max-width: 20.6rem;
+        margin: 0.5rem auto 0;
+        letter-spacing: 0.01em;
+        // box-shadow: 0px 4px 4px 0px #00000040;
+        filter: drop-shadow(0px 4px 4px rgba($black, 0.243));
+        color: $baseclr;
+
+        @media (max-width: 1439px) {
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 991px) {
+            font-size: 1.2rem;
+        }
+
+        @media (max-height: 419px) {
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Alex+Brush&family=Nunito+Sans:opsz@6..12&display=swap');
+
+@font-face {
+    font-family: 'Scriptina';
+    src: local('SCRIPTIN'), url(../fonts/SCRIPTIN.ttf) format('truetype');
+    // src: url('../fonts/Scriptina.woff2') format('woff2'),
+    //     url('../fonts/Scriptina.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+// ****** fonts ******* 
+$basefont: 'Aclonica', sans-serif;
+$secondaryfont: 'Nunito Sans', sans-serif;
+$cursivefont: 'Scriptina';
+
+
+// ***** colors *****
+$baseclr: #FFD08B;
+$baseclr2: #FFBA55;
+$yellowclr: #ECC44B;
+$yellowclr2: #FEC045;
+$green: #06BC0A;
+$white: white;
+$black: black;
+$textclr: #C0C0C0;
+$textclr2: #B2B2B2;
+$errorclr: red;
+$radioBg: #585A54;
+$black23: #232323;
+$black18: #181818;
+
+// ****** gradients ******
+$gradient: linear-gradient(270deg, rgba(255, 246, 196, 0) 0%, #FFF6C4 50%, rgba(255, 246, 196, 0) 100%);
+$gradient2: linear-gradient(270deg, rgba(255, 246, 196, 0) 0%, #FFBA55 50%, rgba(255, 246, 196, 0) 100%);
+
+
+// **** s3 bucket *****
+$s3bucket: "https://satyug-bucket.s3.amazonaws.com/satyugImages";

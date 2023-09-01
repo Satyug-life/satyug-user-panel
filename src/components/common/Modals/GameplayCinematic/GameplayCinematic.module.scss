@@ -1,0 +1,31 @@
+@import "../../../../assets/theme/_var.scss";
+
+.gameplay_cinematic {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 102;
+    background-color: $black;
+
+    video {
+        height: 100vh;
+        width: 100vw;
+        object-fit: fill;
+    }
+
+    .continue_btn {
+        position: fixed;
+        right: 3rem;
+        bottom: 6rem;
+
+        @media (max-width: 991px) {
+            bottom: 2rem;
+            width: 16rem;
+            font-size: 1.2rem;
+            height: 3.8rem;
+        }
+    }
+
+}

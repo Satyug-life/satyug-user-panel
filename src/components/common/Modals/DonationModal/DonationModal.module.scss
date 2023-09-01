@@ -1,0 +1,156 @@
+@import "../../../../assets/theme/_var.scss";
+
+.donation_modal {
+    :global {
+        .modal-dialog {
+            padding: 1.2rem;
+            max-width: 52.9rem;
+            margin: auto;
+            min-height: 100vh;
+
+            .modal-content {
+                border: 2px solid $baseclr2;
+                background-color: $black23;
+                box-shadow: 0px 0px 40px 0px rgba($baseclr2, 0.302);
+
+                .modal-header {
+                    border-bottom: 0;
+                    padding: 1.7rem 1.7rem 3.2rem 1.7rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    @media (max-height: 479px) and (max-width: 1199px) {
+                        padding: 1rem 1.5rem;
+                    }
+
+                    @media (max-width: 575px) {
+                        padding: 1rem;
+                    }
+                }
+
+                .modal-body {
+                    padding: 0 6rem 6.4rem;
+
+                    @media (max-width: 1439px) {
+                        padding: 0 4rem 4rem;
+                    }
+
+                    @media (max-width: 1199px) {
+                        padding: 0 3rem 3rem;
+                    }
+
+                    @media (max-height: 619px) or (max-width: 991px) {
+                        padding: 0 2rem 2rem;
+                    }
+
+                    @media (max-width: 575px) {
+                        padding: 0 1rem 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .close_btn {
+        padding: 0;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+    .input {
+        display: block;
+
+        &.emailId {
+            margin-bottom: 2.6rem;
+
+            @media (max-height: 619px) and (max-width: 1199px) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        label {
+            margin-bottom: 1.2rem;
+            transform: none;
+
+            @media (max-height: 619px) and (max-width: 1199px) {
+                margin-bottom: 0.4rem;
+            }
+        }
+
+        >div {
+            margin-left: 0;
+        }
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        margin: 1.6rem 0 4rem;
+        flex-wrap: wrap;
+
+        @media (max-width: 1199px) {
+            margin: 1rem 0 2rem;
+        }
+
+        @media (max-height: 619px) and (max-width: 1199px) {
+            margin: 1rem 0 1rem;
+        }
+
+        li {
+            margin: 0 1.1rem 1.1rem 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            button {
+                height: 4rem;
+                font-family: $secondaryfont;
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 2.2rem;
+                letter-spacing: 0em;
+                color: rgba($white, 0.5);
+                padding-inline: 1.8rem;
+                background-color: rgba($black, 0.4);
+                border-radius: 0.4rem;
+                border: 1px solid $black;
+
+
+                @media (max-width: 991px) {
+                    height: 3.8rem;
+                    padding-inline: 0.8rem;
+
+                    svg {
+                        max-width: 1.8rem;
+                        margin-right: 0.4rem;
+                    }
+                }
+
+                @media (max-height: 619px) and (max-width: 1199px) {
+                    height: 3.4rem;
+                    padding-inline: 1rem;
+                    font-size: 1.4rem;
+
+                    svg {
+                        max-width: 1.8rem;
+                        margin-right: 0.4rem;
+                    }
+                }
+
+                &.active {
+                    border-color: $baseclr;
+                }
+            }
+        }
+    }
+
+    .proceed_btn {
+        @media (max-height: 419px) {
+            height: 3.4rem;
+            max-width: 14rem;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@import "../../../../assets/theme/_var.scss";
+
+.button {
+    width: 26.7rem;
+    height: 6.8rem;
+    color: $white;
+    background-image: url($s3bucket + "/btn-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: 0.01em;
+    transition: 200ms ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    :global {
+        .spinner-border {
+            width: 3rem;
+            height: 3rem;
+            border-width: 0.5rem;
+            border-color: $baseclr;
+            border-right-color: transparent;
+
+            @media (max-width: 1199px) {
+                width: 2rem;
+                height: 2rem;
+                border-width: 0.3rem;
+            }
+
+            @media (max-width: 991px) {
+                width: 1.6rem;
+                height: 1.6rem;
+                border-width: 0.2rem;
+            }
+        }
+    }
+
+    &:hover {
+        background-image: url($s3bucket + "/btn-bg-hovered.png");
+    }
+
+    @media (max-width: 1439px) {
+        font-size: 1.8rem;
+    }
+
+    @media (max-width: 991px) {
+        font-size: 1.6rem;
+        height: 5rem;
+        width: 20rem;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 1.4rem;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &:disabled {
+        opacity: 0.5 !important;
+        pointer-events: none;
+        filter: grayscale(0.4)
+    }
+
+    &[data-variant*="secondary-btn"] {
+        color: $black;
+        background-image: url($s3bucket + "/btn-bg-2.svg");
+
+        &:hover {
+            background-image: url($s3bucket + "/btn-bg.png");
+        }
+    }
+}

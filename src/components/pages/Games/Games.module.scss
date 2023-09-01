@@ -1,0 +1,249 @@
+@import "../../../assets/theme/_var.scss";
+
+.games {
+    padding-top: 9.1rem;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+
+    @media (max-width: 1679px) {
+        padding-top: 6rem;
+    }
+
+    @media (max-width: 1439px) {
+        padding-top: 4rem;
+    }
+
+    @media (max-height: 419px) and (max-width: 991px) {
+        padding-top: 2.2rem;
+    }
+
+    :global {
+        .container {
+            max-width: 175.2rem;
+            padding-inline: 1.5rem;
+
+            @media (max-width: 1919px) {
+                max-width: 166rem;
+            }
+
+            @media (max-width: 1679px) {
+                max-width: 136rem;
+            }
+
+            // @media (max-width: 1399px) {
+            //     max-width: 112rem;
+            // }
+
+            // @media (max-width: 1199px) {
+            //     max-width: 99rem;
+            // }
+        }
+    }
+
+
+    .games_inner {
+        // min-height: calc(100vh - 9.1rem - 2.9rem);
+        display: flex;
+        // padding: 10rem 0;
+        // padding: 5rem 0;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+
+        // @media (max-width: 1679px) {
+        //     padding: 6rem 0;
+        // }
+
+        // @media (max-width: 1439px) {
+        //     padding: 4rem 0;
+        // }
+
+        // @media (max-width: 1199px) {
+        //     padding: 3rem 0;
+        // }
+
+        @media (max-height: 619px) {
+            // padding: 0 0 2rem;
+            justify-content: flex-start;
+            min-height: auto;
+        }
+
+        .games_logo {
+            z-index: 1;
+
+            @media (min-width: 1440px) {
+                transform: translateY(100%);
+            }
+        }
+
+
+        .animation {
+            position: absolute;
+            top: 50%;
+            opacity: 0.8;
+            left: 50%;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+
+            // @media (min-width: 1440px) {
+            //     transform: translate(-50%, calc(-50% - 4rem));
+            // }
+
+            svg {
+                max-width: unset;
+                width: 90rem !important;
+
+                @media (max-width: 1439px) {
+                    width: 80rem !important;
+                }
+
+                @media (max-width: 991px) {
+                    width: 60rem !important;
+                }
+
+                @media (max-height: 619px) and (max-width: 1199px) {
+                    width: 70rem !important;
+                }
+
+                @media (max-height: 479px) and (max-width: 1199px) {
+                    width: 60rem !important;
+                }
+
+                @media (max-height: 619px) and (max-width: 991px) {
+                    width: 60rem !important;
+                }
+
+                @media (max-height: 575px) and (max-width: 991px) {
+                    width: 50rem !important;
+                }
+
+                // @media (min-width: 1440px) and (max-height: 991px) {
+                //     width: 80rem !important;
+                // }
+
+                // @media (min-width: 1440px) and (max-height: 767px) {
+                //     width: 70rem !important;
+                // }
+
+                // @media (min-width: 1440px) and (min-height: 992px) {
+                //     width: 100rem !important;
+                // }
+            }
+        }
+
+        .mandir_card {
+            &::after {
+                background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 86.41%),
+                    linear-gradient(0deg, rgba(17, 10, 10, 0.2), rgba(17, 10, 10, 0.4)),
+                    linear-gradient(180deg, #6F6F6F 18.46%, #ffffff00 77.53%, #3F3F3F 134.04%),
+                    linear-gradient(180deg, #ffba5500 33.25%, #ffba5500 67.37%, #ffba5500 100%);
+            }
+        }
+
+        :global {
+            .slick-slider {
+                width: 100%;
+            }
+
+            .slick-list {
+                padding-top: 12rem;
+
+                @media (max-width: 1439px) {
+                    padding-top: 4rem;
+                }
+
+                @media (max-height: 419px) and (max-width: 1439px) {
+                    padding-top: 2rem;
+                }
+            }
+
+            .slick-track {
+                display: flex;
+
+                .slick-slide {
+                    height: auto;
+                    padding-inline: 3rem;
+                    transition: 200ms ease-in-out;
+
+                    @media (max-width: 1679px) {
+                        padding-inline: 2rem;
+                    }
+
+                    @media (max-width: 1439px) {
+                        padding-inline: 1.4rem;
+                    }
+
+                    @media (max-width: 767px) and (max-height: 479px) {
+                        padding-inline: 0.7rem;
+                    }
+
+                    // $transformValues : (1 : 100px,
+                    //         "1" : -120px,
+                    //         "2" : -60px,
+                    //         "3": 0,
+                    //         "4": -60px,
+                    //         "5": -120px,
+                    //     );
+
+                    // @each $key,
+                    // $value in $transformValues {
+                    //     &:nth-child(#{$key}) {
+                    //         >div {
+                    //             >div {
+                    //                 transform: translateY(#{$value});
+                    //             }
+                    //         }
+                    //     }
+                    // }
+
+                    @media (min-width: 1440px) {
+                        &[aria-hidden="true"] {
+                            transform: translateY(-18rem);
+                        }
+
+                        &.slick-current {
+                            transform: translateY(-12rem);
+
+                            +div {
+                                transform: translateY(-6rem);
+
+                                +div {
+                                    transform: translateY(0rem);
+
+                                    +div {
+                                        transform: translateY(-6rem);
+
+                                        +div {
+                                            transform: translateY(-12rem);
+
+                                            +div {
+                                                transform: translateY(-18rem);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    >div {
+                        height: 100%;
+
+                        >div {
+                            height: 100%;
+
+                            >div {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

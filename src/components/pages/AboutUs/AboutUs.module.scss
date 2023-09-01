@@ -1,0 +1,251 @@
+@import "../../../assets/theme/_var.scss";
+
+.Blurred {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($black, 0.0);
+    backdrop-filter: blur(0.4rem);
+    z-index: 1000;
+}
+
+.about_us {
+    position: relative;
+    z-index: 0;
+    height: 100vh;
+    overflow: auto;
+
+    @media (max-height: 519px) {
+        padding-top: 10rem;
+    }
+
+    @media (max-height: 399px) {
+        padding-top: 20rem;
+    }
+
+    .about_video {
+        position: fixed;
+        top: 0;
+        z-index: -1;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: fill;
+    }
+
+    :global {
+        .container {
+            height: 100%;
+        }
+    }
+
+    .about_content {
+        // min-height: 100vh;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 0 0;
+
+        .heading {
+            text-align: center;
+
+            @media (max-width: 991px) {
+                max-width: 40rem;
+            }
+        }
+
+
+        .about_list {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5rem 0 0;
+            margin-top: auto;
+            margin-bottom: auto;
+            justify-content: center;
+
+            @media (max-width: 991px) {
+                padding: 2rem 0 0;
+            }
+
+            @media (max-height: 419px) {
+                padding: 1rem 0 1rem;
+            }
+
+            li {
+                flex: 0 0 100%;
+                color: $white;
+                font-size: 2.4rem;
+                text-align: center;
+                padding: 2rem;
+
+                strong {
+                    color: $baseclr2;
+                }
+
+                @media (max-width: 1439px) {
+                    font-size: 2.2rem;
+                    padding: 1.8rem;
+                }
+
+                @media (max-width: 1199px) {
+                    font-size: 2rem;
+                    padding: 1.6rem;
+                }
+
+                @media (max-width: 991px) {
+                    font-size: 1.8rem;
+                    padding: 1.4rem;
+
+                    strong {
+                        display: block;
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    font-size: 1.6rem;
+                    padding: 1.2rem;
+                }
+
+                @media (max-width: 575px) {
+                    font-size: 1.4rem;
+                    padding: 0.8rem;
+                }
+
+                @media (max-height: 619px) {
+                    font-size: 1.8rem;
+                }
+
+                @media (max-height: 479px) {
+                    font-size: 1.6rem;
+                }
+
+                @media (max-height: 419px) {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        footer {
+            // margin-top: auto;
+
+            .footer_links {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem 0;
+                border-bottom: 1px solid $white;
+                flex-wrap: wrap;
+
+                @media (max-width: 991px) {
+                    justify-content: center;
+                }
+
+                li {
+                    padding: 1rem;
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+
+                    a {
+                        font-size: 1.6rem;
+                        color: $white;
+
+                        &:hover {
+                            color: $baseclr;
+                        }
+
+                        @media (max-width: 1199px) {
+                            font-size: 1.4rem;
+                        }
+
+                        @media (max-width: 991px) {
+                            font-size: 1.2rem;
+                        }
+
+                        @media (max-width: 575px) {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .footer_details {
+                display: flex;
+                align-items: center;
+                padding: 1rem 0;
+                justify-content: space-between;
+
+                @media (max-width: 575px) {
+                    display: block;
+                    text-align: center;
+                }
+
+                .copy_right {
+                    color: $yellowclr;
+                    font-size: 1.6rem;
+
+                    @media (max-width: 1199px) {
+                        font-size: 1.4rem;
+                    }
+
+                    @media (max-width: 991px) {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .footer_social {
+                    display: flex;
+                    align-items: center;
+
+                    @media (max-width: 575px) {
+                        justify-content: center;
+                        margin-top: 1rem;
+                    }
+
+                    li {
+                        margin-right: 0.8rem;
+
+
+                        a {
+                            width: 3.4rem;
+                            height: 3.4rem;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            svg {
+                                width: 2rem;
+                                height: 2rem;
+
+                                path {
+                                    fill: $white;
+                                }
+                            }
+
+                            &:hover {
+                                svg {
+                                    path {
+                                        fill: $yellowclr;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

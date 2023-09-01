@@ -1,0 +1,456 @@
+@import "../../../../assets/theme/_var.scss";
+
+.game_card {
+    padding-top: 2.8rem;
+    padding-bottom: 3.5rem;
+
+    @media (max-width: 1599px) {
+        padding-top: 2.4rem;
+    }
+
+    @media (max-width: 1599px) {
+        padding-top: 2.4rem;
+        padding-bottom: 3rem;
+    }
+
+    @media (max-width: 1199px) {
+        padding-top: 2rem;
+        padding-bottom: 2.6rem;
+    }
+
+    @media (max-width: 991px) {
+        padding-top: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    @media (max-height: 575px) and (max-width: 1199px) {
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .game_inner {
+        transition: 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        border: 2px solid transparent;
+        background: linear-gradient(180deg, $black, $black) padding-box, linear-gradient(180deg, #FFBA55 33.25%, #FFBA55 67.37%, #FFBA55 100%) border-box;
+
+        &::after {
+            content: "";
+            height: 2.5px;
+            width: 40%;
+            background-color: black;
+            position: absolute;
+            top: -0.2rem;
+            z-index: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .left_arrow,
+        .right_arrow {
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+            display: none;
+
+            @media (max-width: 1439px) {
+                width: 1.4rem;
+            }
+        }
+
+        .left_arrow {
+            transform: translate(-100%, -50%);
+            left: 0;
+        }
+
+        .right_arrow {
+            transform: translate(100%, -50%);
+            right: 0;
+        }
+
+        .archery_icon {
+            position: absolute;
+            top: -0.5rem;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+
+            &::after {
+                // content: "";
+                width: 100%;
+                height: 2.5px;
+                background-color: $black;
+                position: absolute;
+                top: 2rem;
+                z-index: -1;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @media (max-width: 1679px) {
+                    top: 1.7rem;
+                }
+
+                @media (max-width: 1199px) {
+                    top: 1.5rem;
+                }
+
+                @media (max-width: 991px) {
+                    top: 1.2rem;
+                }
+
+                @media (max-width: 767px) {
+                    top: 1rem;
+                }
+            }
+        }
+
+        .game_image {
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                opacity: 0.8;
+                top: 0;
+                left: 0;
+                // background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 86.41%),
+                //     linear-gradient(0deg, rgba(17, 10, 10, 0.4), rgba(17, 10, 10, 0.4)),
+                //     linear-gradient(180deg, #6F6F6F 18.46%, #ffffff00 77.53%, #3F3F3F 134.04%),
+                //     linear-gradient(180deg, #ffba5500 33.25%, #ffba5500 67.37%, #ffba5500 100%);
+                background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 86.41%),
+                    linear-gradient(0deg, rgba(17, 10, 10, 0.8), rgba(17, 10, 10, 0.4)),
+                    linear-gradient(180deg, #6F6F6F 18.46%, #ffffff00 77.53%, #3F3F3F 134.04%),
+                    linear-gradient(180deg, #ffba5500 33.25%, #ffba5500 67.37%, #ffba5500 100%);
+            }
+
+            >img {
+                width: 100%;
+                height: 43.7rem;
+                object-fit: cover;
+                object-position: top;
+
+                @media (max-width: 1679px) {
+                    height: 38rem;
+                }
+
+                @media (max-width: 1365px) {
+                    height: 34rem;
+                }
+
+                @media (max-width: 991px) {
+                    height: 28rem;
+                }
+
+                @media (max-width: 479px) {
+                    height: 20rem;
+                }
+
+                @media (max-height: 575px) and (max-width: 991px) {
+                    height: 21rem;
+                }
+
+                // @media (max-height: 489px) and (max-width: 991px) {
+                //     height: 18rem;
+                // }
+
+                // @media (max-height: 419px) and (max-width: 1199px) {
+                //     height: 18rem;
+                // }
+            }
+
+            &.coming_soon {
+                >img {
+                    filter: blur(0.3rem);
+                }
+            }
+        }
+
+        .game_title {
+            position: absolute;
+            top: 0rem;
+            height: 100%;
+            padding: 3rem 1rem 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+
+            @media (max-width: 991px) {
+                padding: 02rem 0.6rem 0;
+            }
+
+            h2 {
+                transition: 200ms ease-in-out;
+                font-size: 2.4rem;
+                font-weight: 400;
+                line-height: 2.7rem;
+                letter-spacing: 0.01em;
+                text-align: center;
+                color: $baseclr;
+                filter: drop-shadow(0px 4px 4px rgba($black, 0.243));
+
+                @media (max-width: 1679px) {
+                    font-size: 2rem;
+                }
+
+                @media (max-width: 1439px) {
+                    font-size: 1.8rem;
+                }
+
+                @media (max-width: 1365px) {
+                    font-size: 1.6rem;
+                }
+
+                @media (max-width: 1199px) {
+                    font-size: 1.4rem;
+                    line-height: 2rem;
+                }
+
+                @media (max-width: 991px) {
+                    font-size: 1.2rem;
+                }
+
+                @media (max-width: 767px) {
+                    font-size: 1.1rem;
+                    line-height: 1.4rem;
+                }
+            }
+
+            .coming_soon_img {
+                margin: auto auto;
+                position: relative;
+
+                @media (max-width: 991px) and (max-height: 575px) {
+                    top: -1rem;
+                }
+
+                p {
+                    font-size: 2rem;
+                    font-weight: 400;
+                    line-height: 2rem;
+                    letter-spacing: 0.01em;
+                    text-align: center;
+                    color: $white;
+                    filter: drop-shadow(0px 2px 4px #000000);
+                    position: absolute;
+                    top: 50%;
+                    z-index: 12;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    @media (max-width: 1679px) {
+                        font-size: 1.6rem;
+                    }
+
+                    @media (max-width: 991px) {
+                        font-size: 1.4rem;
+                    }
+
+                    @media (max-width: 767px) {
+                        font-size: 1.1rem;
+                        line-height: 1.5rem;
+                    }
+
+                    @media (max-height: 479px) and (max-width: 1199px) {
+                        font-size: 1rem;
+                    }
+                }
+
+                &.locked_img {
+                    img {
+                        max-width: 16.9rem;
+
+                        @media (max-width: 1199px) {
+                            max-width: 10rem;
+                        }
+
+                        @media (max-width: 479px) {
+                            max-width: 8rem;
+                        }
+
+                        @media (max-height: 619px) {
+                            max-width: 10rem;
+                        }
+
+                        @media (max-height: 489px) {
+                            max-width: 8rem;
+                        }
+
+                        @media (max-height: 419px) {
+                            max-width: 6rem;
+                        }
+                    }
+                }
+
+                :global {
+                    @keyframes rotation {
+                        from {
+                            transform: rotate(0);
+                        }
+
+                        to {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+
+                img {
+                    max-width: 22rem;
+                    transition: 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    width: 100%;
+
+
+                    @media (max-width: 1679px) {
+                        max-width: 16rem;
+                    }
+
+                    @media (max-width: 1365px) {
+                        max-width: 12rem;
+                    }
+
+                    @media (max-width: 991px) {
+                        max-width: 9rem;
+                    }
+
+                    @media (max-width: 767px) {
+                        max-width: 8rem;
+                    }
+
+                    @media (max-height: 479px) and (max-width: 1199px) {
+                        max-width: 7rem;
+                    }
+                }
+            }
+
+            &:hover {
+                .coming_soon_img {
+                    img {
+                        animation: rotation 4s linear infinite;
+                        // transform: rotate(90deg);
+                    }
+
+                    &.locked_img {
+                        img {
+                            animation: unset;
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .fire_sparkles {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 200ms ease-in-out;
+            pointer-events: none;
+        }
+
+        .action_btn {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 50%);
+
+            &:hover {
+                background-image: url($s3bucket + "/btn-bg.png");
+            }
+
+            @media (max-width: 1679px) {
+                width: 100%;
+                max-width: 21rem;
+                height: 5rem;
+                font-size: 1.8rem;
+            }
+
+            @media (max-width: 1365px) {
+                height: 5.2rem;
+                font-size: 1.3rem;
+            }
+
+            @media (max-width: 1199px) {
+                height: 4.5rem;
+            }
+
+            @media (max-width: 991px) {
+                height: 3.1rem;
+                font-size: 1.2rem;
+                max-width: 16rem;
+            }
+
+            @media (max-width: 479px) {
+                max-width: 8rem;
+                height: 2.2rem;
+                font-size: 0.8rem;
+            }
+
+            @media (max-height: 419px) and (max-width: 767px) {
+                font-size: 0.8rem;
+                max-width: 8rem;
+                height: 2.2rem;
+            }
+        }
+    }
+
+    &.play_card {
+        .game_inner {
+            .game_image {
+                &::after {
+                    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 86.41%),
+                        linear-gradient(0deg, rgba(17, 10, 10, 0.0), rgba(17, 10, 10, 0.0)),
+                        linear-gradient(180deg, #6F6F6F00 18.46%, #ffffff00 77.53%, #3f3f3f6b 134.04%),
+                        linear-gradient(180deg, #ffba5500 33.25%, #ffba5500 67.37%, #ffba5500 100%);
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .game_inner {
+            box-shadow: 0px 0px 3rem 0px rgba($baseclr2, 0.302);
+
+            .fire_sparkles {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .left_arrow,
+            .right_arrow {
+                display: block
+            }
+        }
+    }
+
+    &.locked_card {
+        .game_inner {
+            .game_image {
+                &::after {
+                    opacity: 1;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 1.41%, rgba(0, 0, 0, 0) 47.31%),
+                        linear-gradient(0deg, rgba(30, 9, 9, 0.8), rgba(30, 9, 9, 0.8));
+                }
+            }
+        }
+
+        &:hover {
+
+            .game_inner {
+                transform: scale(1.02);
+
+                // .game_title {
+                // h2 {
+                // opacity: 0;
+                // visibility: hidden;
+                // }
+                // }
+            }
+        }
+    }
+}

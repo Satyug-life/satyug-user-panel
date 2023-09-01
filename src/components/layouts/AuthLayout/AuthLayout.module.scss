@@ -1,0 +1,27 @@
+@import "../../../assets/theme/_var.scss";
+
+.auth_layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url($s3bucket + "/auth-bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .auth_inner {
+        margin-top: 5rem;
+
+        @media (max-width: 1439px) {
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 991px) {
+            margin-top: 3rem;
+        }
+
+        @media (max-height: 619px) and (max-width: 1439px) {
+            margin-top: 3rem;
+        }
+    }
+}

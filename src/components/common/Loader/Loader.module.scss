@@ -1,0 +1,26 @@
+@import "../../../assets/theme/_var.scss";
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1060;
+    padding: 4rem;
+    backdrop-filter: blur(0.8rem);
+    background-color: rgba($black, 0.4);
+
+    :global {
+        .spinner-border {
+            width: 5rem;
+            height: 5rem;
+            border-width: 0.6rem;
+            border-color: $baseclr;
+            border-right-color: transparent;
+        }
+    }
+}

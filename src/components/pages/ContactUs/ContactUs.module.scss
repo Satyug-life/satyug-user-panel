@@ -1,0 +1,152 @@
+@import "../../../assets/theme/_var.scss";
+
+.contact_us {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 10rem 0;
+
+    @media (max-width: 1199px) {
+        padding: 6rem 0;
+    }
+
+    @media (max-width: 991px) {
+        padding: 3rem 0;
+    }
+
+    @media (max-height: 767px) {
+        padding: 6rem 0;
+    }
+
+    @media (max-height: 619px) {
+        padding: 3rem 0;
+    }
+
+    .archery_icon {
+        margin-inline: auto;
+        display: block;
+    }
+
+    .heading {
+        margin: 2rem 0 0;
+    }
+
+    .animation {
+        max-width: 20.4rem;
+        margin-inline: auto;
+
+    }
+
+    form {
+        max-width: 100rem;
+        margin-inline: auto;
+
+        :global {
+            .row {
+                margin: -1.2rem;
+
+                >div {
+                    padding: 1.2rem;
+                }
+            }
+        }
+
+        button {
+            display: block;
+            margin: 2rem auto 0;
+        }
+    }
+
+    .input {
+        height: 100%;
+
+        @media (min-width: 576px) {
+            label {
+                width: 10rem;
+                text-align: right;
+                flex-shrink: 0;
+            }
+        }
+
+        @media (min-width: 767px) {
+            label {
+                width: 14rem;
+            }
+        }
+
+        >div {
+            width: 100%;
+            height: 100%;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+        }
+
+        textarea {
+            height: 100%;
+        }
+    }
+
+    .social_details {
+        display: flex;
+        align-items: center;
+        margin: 8rem 0 2rem;
+
+        @media (max-width: 1439px) {
+            margin: 6rem 0 2rem;
+        }
+
+        @media (max-width: 1199px) {
+            margin: 4rem 0 2rem;
+        }
+
+        @media (max-width: 991px) or (max-height: 619px) {
+            margin: 3rem 0 2rem;
+        }
+
+        @media (max-width: 619px) {
+            display: block;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // max-width: 22rem;
+            margin: 2rem auto 0;
+
+
+            a {
+                width: 100%;
+                position: relative;
+                color: $baseclr;
+                font-size: 1.4rem;
+                line-height: 2.1rem;
+                text-align: left;
+                padding-left: 3rem;
+
+                @media (max-width: 1199px) {
+                    font-size: 1.2rem;
+                }
+
+                @media (max-height: 619px) and (max-width: 991px) {
+                    font-size: 1rem;
+                    max-width: max-content;
+                }
+
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                    left: 0;
+                    position: absolute;
+                }
+
+                &:hover {
+                    color: $baseclr2;
+                }
+            }
+        }
+    }
+}
